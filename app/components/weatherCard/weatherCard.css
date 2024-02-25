@@ -1,0 +1,160 @@
+:root {
+    --morro: #aacbe6;
+    --cayucos: #9cd0ff;
+    --bahamas: #3cc0fe;
+    --capetown: #27a5fd;
+    --cabo: #0066ff;
+    --reynisfjara: #34373e;
+    --svalbard: #d2e9fa;
+
+    --bahamasAlpha: rgba(60, 192, 254, 0.7);
+    --caboAlpha: rgba(0, 102, 255, 0.6);
+
+    --capetownShadow: rgba(39, 165, 253, 0.4);
+
+    --widgetHeight: 400px;
+    --pictoBackdropDiameter: calc(var(--widgetHeight) * 1.4);
+    --pictoFrameDiameter: calc(var(--pictoBackdropDiameter) * 0.6);
+    --pictoCloudBigDiameter: calc(var(--pictoFrameDiameter) * 0.65);
+    --pictoCloudSmallDiameter: calc(var(--pictoCloudBigDiameter) * 0.7);
+    --pictoCloudFillSize: calc(var(--pictoCloudSmallDiameter) * 0.7);
+    --iconCloudBigDiameter: 36px;
+    --iconCloudSmallDiameter: calc(var(--iconCloudBigDiameter) * 0.65);
+    --iconCloudFillSize: calc(var(--iconCloudSmallDiameter) * 0.7);
+}
+
+.containerWidget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget {
+    background: linear-gradient(to bottom right, var(--bahamas) 20%, var(--cabo));
+    width: 900px;
+    /* height: var(--widgetHeight); */
+    border-radius: 6px;
+    box-shadow: 0px 60px 80px -20px var(--capetownShadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.pictoBackdrop {
+    position: absolute;
+    height: var(--pictoBackdropDiameter);
+    width: var(--pictoBackdropDiameter);
+    border-radius: 50%;
+    /* background: linear-gradient(160deg, var(--bahamasAlpha) 40%, var(--caboAlpha)); */
+    right: -40px;
+    top: -90px;
+}
+
+.pictoFrame {
+    position: absolute;
+    background: var(--reynisfjara);
+    border-radius: 50%;
+    box-shadow: 0px 50px 60px -20px var(--cabo);
+    height: var(--pictoFrameDiameter);
+    width: var(--pictoFrameDiameter);
+    right: 80px;
+    top: 25px;
+}
+
+.pictoCloudBig {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--morro);
+    box-shadow: 20px 20px 80px -20px var(--morro);
+    height: var(--pictoCloudBigDiameter);
+    width: var(--pictoCloudBigDiameter);
+    top: 80px;
+    right: 160px;
+}
+.pictoCloudFill {
+    position: absolute;
+    background: var(--morro);
+    box-shadow: 0px 20px 80px -20px var(--morro);
+    height: var(--pictoCloudFillSize);
+    width: var(--pictoCloudFillSize);
+    top: 191px;
+    right: 265px;
+}
+.pictoCloudSmall {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--svalbard);
+    height: var(--pictoCloudSmallDiameter);
+    width: var(--pictoCloudSmallDiameter);
+    top: 146px;
+    right: 282px;
+}
+
+.iconCloudBig {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--cayucos);
+    height: var(--iconCloudBigDiameter);
+    width: var(--iconCloudBigDiameter);
+    top: 200px;
+    left: 80px;
+}
+.iconCloudSmall {
+    position: absolute;
+    border-radius: 50%;
+    height: var(--iconCloudSmallDiameter);
+    width: var(--iconCloudSmallDiameter);
+    background: var(--svalbard);
+    top: 213px;
+    left: 70px;
+}
+.iconCloudFill {
+    position: absolute;
+    height: var(--iconCloudFillSize);
+    width: var(--iconCloudFillSize);
+    background: var(--cayucos);
+    top: 220px;
+    left: 80px;
+}
+
+.details {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.temperature {
+    color: white;
+    font-weight: 300;
+    font-size: 10em;
+    text-align: left;
+}
+.summary {
+    color: var(--svalbard);
+    font-size: 2em;
+    font-weight: 300;
+    width: 260px;
+    margin-top: -16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--cayucos);
+    margin-left: 8px;
+}
+.summaryText {
+    margin: 0;
+    margin-left: 56px;
+    color: white;
+}
+.precipitation,
+.wind {
+    color: var(--svalbard);
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-left: 8px;
+    text-align: left;
+}
+.precipitation {
+    margin-top: 16px;
+}
+.wind {
+    margin-top: 4px;
+}
