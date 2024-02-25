@@ -6,7 +6,6 @@ import {
   FormControl,
   Box,
   CircularProgress,
-  Container,
   Typography,
   TextField,
 } from "@mui/material";
@@ -113,7 +112,7 @@ export default function Home() {
 
   return (
     <main>
-      <Container className="container">
+      <Box className="container">
         {loading ? (
           <Box>
             <CircularProgress />
@@ -197,7 +196,7 @@ export default function Home() {
             )}
           </>
         )}
-      </Container>
+      </Box>
     </main>
   );
 }
