@@ -151,7 +151,11 @@ export default function Home() {
                 </Typography>
               )}
             </Box>
-            <Box minWidth={200} sx={{ position: "relative", mt: 5 }}>
+            <Box
+              minWidth={230}
+              maxWidth={230}
+              sx={{ position: "relative", mt: 5 }}
+            >
               <FormControl fullWidth>
                 <TextField
                   id="city"
